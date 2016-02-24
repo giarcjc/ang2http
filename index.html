@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Angular 2 QuickStart</title>
+    <title>Angular 2 Http Demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">    
 
     <!-- 1. Load libraries -->
@@ -12,15 +12,18 @@
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.dev.js"></script>
 
     <!-- 2. Configure SystemJS -->
     <script>
       System.config({
+        map: { 'rxjs': 'node_modules/rxjs' },
         packages: {        
           app: {
             format: 'register',
             defaultExtension: 'js'
-          }
+          },
+          'rxjs': {defaultExtension: 'js'}
         }
       });
       System.import('app/main')
